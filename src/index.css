@@ -38,7 +38,9 @@ body{
   border-radius: 0.3rem;
   z-index: 6;
   width: 270px;
-  top: 25%;
+  top: 4rem;
+  animation: showup .5s ease-in-out 0s 1 alternate forwards;
+  transition: animation .5s ease-in-out ;
 }
 
 .todo-header p{
@@ -175,4 +177,10 @@ body{
 .color-box{
   height: 40px;
   width: 40px;
+}
+
+@keyframes showup{
+  from{
+    top: 7rem;
+  }
 }

@@ -5,29 +5,30 @@ import AddTodo from './AddTodo';
 import { RiErrorWarningFill } from 'react-icons/ri';
 const Wrapper = () => {
   const [showAddTodo, setShowAddTodo] = useState(false);
-  const [todos, setTodos] = useState([
-    {
-      id: 1,
-      title: 'Learn CSS 3',
-      subtitle: '30 mins',
-      completed: false,
-      color: '#0985cc',
-    },
-    {
-      id: 2,
-      title: 'Start Vue Js',
-      subtitle: 'Monday',
-      completed: false,
-      color: '#28cc7f',
-    },
-    {
-      id: 3,
-      title: 'Read a Book',
-      subtitle: 'Next Week',
-      completed: true,
-      color: '#f5437e',
-    },
-  ]);
+  const [todos, setTodos] = useState([]);
+
+  // Sample Data
+  // {
+  //   id: 1,
+  //   title: 'Learn CSS 3',
+  //   subtitle: '30 mins',
+  //   completed: false,
+  //   color: '#0985cc',
+  // },
+  // {
+  //   id: 2,
+  //   title: 'Start Vue Js',
+  //   subtitle: 'Monday',
+  //   completed: false,
+  //   color: '#28cc7f',
+  // },
+  // {
+  //   id: 3,
+  //   title: 'Read a Book',
+  //   subtitle: 'Next Week',
+  //   completed: true,
+  //   color: '#f5437e',
+  // },
 
   // Add Todos ...
 
@@ -56,11 +57,11 @@ const Wrapper = () => {
 
   return (
     <div className="wrapper">
+      {showAddTodo && <AddTodo onAdd={addTodo} />}
       <Header
         onShowTodo={() => setShowAddTodo(!showAddTodo)}
         showTodo={showAddTodo}
       />
-      {showAddTodo && <AddTodo onAdd={addTodo} />}
       {todos.length > 0 ? (
         <Todos todos={todos} onDelete={deleteTodo} onCheck={checkTodo} />
       ) : (
