@@ -37,6 +37,7 @@ const Wrapper = () => {
     const defaultCompleted = false;
     const newTodo = { id, ...task, defaultCompleted };
     setTodos([...todos, newTodo]);
+    setShowAddTodo(false);
   };
 
   // Delete ToDo...

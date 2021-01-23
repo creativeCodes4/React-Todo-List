@@ -151,6 +151,9 @@ body{
 }
 .form-group .form-control{
   padding: 0.3rem;
+  outline: none;
+  border: 1px solid #858585;
+  border-radius: 5px;
 }
 .add-btn{
   padding: 0.3rem;
@@ -170,6 +173,10 @@ body{
 }
 .form-color-group select{
   padding: 0.3rem;
+  outline: none;
+  border: none;
+  border: 1px solid #858585;
+  border-radius: 5px;
 }
 .form-color-group select option{
   height: 1rem;
