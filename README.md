@@ -10,7 +10,12 @@ In the project directory, you can run:
 
 ### `yarn install`
 
-### For Installing Required Packages
+##### For Installing Required Packages
+
+
+
+---
+
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
